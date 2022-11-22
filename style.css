@@ -1,7 +1,116 @@
+*{margin:0; padding:0; box-sizing: border-box;}
+
 body{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
     src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCRc4EsA.woff2) format('woff2');
     unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+    background-color: #f2f4fc;
 }
+
+#navbar, section, footer {
+    max-width: 70%;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 75px 0 75px 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #6C718B;
+    font-weight:500;
+    font-size: 1.05rem;
+    margin: 0 14px 0 14px;
+}
+
+.nav-links a:hover {
+    color: #0082F3;
+}
+
+.btn-blue {
+    background-color: #072AC8;
+    color: white;
+    font-weight:500;
+    font-size: 1.05rem;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.link {
+    text-decoration: none;
+    color: #6C718B;
+    font-weight:500;
+    font-size: 1.05rem;
+    margin: 0 14px 0 14px;
+}
+
+.btn-blue:hover {
+    background-color: #292e47;
+}
+
+#main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main div {
+    width: 46%;
+}
+
+.txt-block h1 {
+    font-size: 3.9rem;
+    color: #292E47;
+}
+
+.txt-block p {
+    font-size: 1.3rem;
+    color: #6b708d;
+    font-weight: 400;
+    line-height: 150%;
+    margin: 30px 0 50px 0;
+}
+
+#img-block {
+    position: relative;
+    /* height: 800px;
+    background-image: url('../resources/images/hero-section/hero-image.png');
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+#main-img {
+    width: 100%;
+}
+
+#credit-card-img {
+    position: absolute;
+    left: -19%;
+    top: 0%;
+    right: auto;
+    bottom: auto;
+    max-width: 57%;
+    }
+
+#project-accepted-img {
+    position: absolute;
+    left: auto;
+    top: auto;
+    right: -25%;
+    bottom: -22%;
+    max-width: 57%;
+    z-index: 999;
+    }
+
+#brands {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 75px;
