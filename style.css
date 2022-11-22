@@ -7,6 +7,7 @@ body{
     src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCRc4EsA.woff2) format('woff2');
     unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
     background-color: #f2f4fc;
+    color: #292e47;
 }
 
 #navbar, section, footer {
@@ -114,3 +115,47 @@ nav {
     align-items: center;
     margin-top: 150px;
     margin-bottom: 75px;
+}
+
+.title {
+    margin: 175px 0 75px 0;
+}
+
+.title h2 {
+    font-size: 2.5rem;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 25px;
+    grid-row-gap: 0px;
+}
+
+.project {
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+.project img {
+    width: 100%;
+    height: 240px;
+}
+
+.project h3 {
+    font-size: 1.3rem;
+    margin: 27px;
+}
+
+.project p {
+    font-size: 1.1rem;
+    margin: 0 27px 27px 27px;
+}
+
+.project a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #072AC8;;
+    margin: 0 27px 27px 27px;
+}
