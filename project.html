@@ -37,7 +37,7 @@
     </div>
     <section id="project-main">
         <div class="txt-title">
-            <h1>Simplify</h1>
+            <!-- <h1>Simplify</h1>
             <div class="subtitle">
                 <h2>UI Design & App Development</h2>
                 <h3>Completed on 2/2/22</h3>
@@ -48,7 +48,7 @@
             <div class="txt-container">
                 <p>Simplify is lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat faucibus sem, id vulputate justo ornare non. Nullam et vehicula sem. Pellentesque bibendum massa non nisl posuere cursus. Aliquam ac eros pretium neque consequat facilisis. Ut sit amet justo varius ex ultrices fringilla. Sed vel turpis fringilla ante gravida vestibulum. Etiam a sollicitudin leo. Nunc metus lectus, lacinia ut arcu quis, pretium congue lacus.</p>
                 <p>Aliquam blandit varius metus, in mattis orci convallis sit amet. Fusce et sem ac velit placerat ultrices in id dolor. Sed eget auctor metus. Sed suscipit fringilla lectus, a maximus justo bibendum a. Donec et pellentesque nisl, vitae tempus lorem. Sed efficitur cursus rhoncus. Duis placerat nisi quis mi tincidunt, sit amet tincidunt urna convallis. Nam et sagittis felis. Pellentesque placerat orci sodales nisi convallis ultrices. Nunc posuere neque eu mi imperdiet ullamcorper. Praesent tempor convallis rutrum. Vestibulum dignissim pellentesque eros in placerat. Etiam at nisi quis quam sollicitudin vehicula sit amet vel mi.</p>
-            </div>
+            </div> -->
         </div>
     </section>
     <section id="projects">
@@ -98,5 +98,35 @@
             <a href="#"><div>Privacy Policy</div></a>
         </div>
     </footer>
+    <script>
+        //extraemos el numero del post de la url
+        let params = new URLSearchParams(location.search);
+        var postUrl = params.get('p');
+
+        //consultamos el post extraeido de la url
+        const getPost = (post) => {
+            fetch(`https://jsonplaceholder.typicode.com/posts/${post}`)
+            .then((response) => response.json())
+            .then((res) => {
+
+                    //console.log(res)
+
+                    document.querySelector('.txt-title').innerHTML += `<h1>${res.title}</h1>
+            <div class="subtitle">
+                <h2>${res.title}</h2>
+                <h3>Completed on 2/2/22</h3>
+            </div>
+            <div class="img-container">
+                <img src="./resources/images/projects-section/${res.id}.jpg" alt="">
+            </div>
+            <div class="txt-container">
+                <p>${res.body}</p>
+            </div>`;
+            })
+            .catch((error) => console.log(error))
+        }
+
+        getPost(postUrl);
+    </script>
 </body>
 </html>
