@@ -5,7 +5,6 @@ body{
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 300;
-    
     unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
     background-color: #f2f4fc;
     color: #292e47;
@@ -348,7 +347,7 @@ nav {
     height: 70px;
     font-weight: 400;
     font-size: 1.1rem;
-    width: 65%;
+    width: 500px;
     background: url('../resources/images/newsletter/icon/mail.svg') no-repeat scroll 7px 7px;
     background-position: 3% 50%;
     background-color: white;
@@ -356,7 +355,7 @@ nav {
 }
 
 .email-subscribe {
-    width: 55%;
+    width: 100%;
 }
 
 #email-sub-btn {
@@ -396,3 +395,287 @@ footer {
     width: 100px;
     margin-bottom: 20px;
 }
+
+.subtitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.subtitle h2, .subtitle h3 {
+    font-weight: 400;
+    color: #6C718B;
+    margin: 25px 0 55px 0;
+}
+
+.txt-title h1 {
+    font-size: 3.9rem;
+    color: #292E47;
+}
+
+.img-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 444px;
+    margin-bottom: 70px;
+}
+
+.txt-container p {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-phone {
+    display: flex;
+    justify-content: space-between;
+}
+
+.email-phone div {
+    width: 49.5%;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-main .txt-title h1 {
+    padding-bottom: 70px;
+}
+
+label {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #6b708d;
+    margin-bottom: 10px;
+}
+
+input {
+    border: 0;
+    background-color: rgba(107, 112, 141, 0.1);
+    height: 70px;
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding-left: 15px;
+    margin-bottom: 24px;
+}
+
+textarea {
+    border: 0;
+    background-color: rgba(107, 112, 141, 0.1);
+    height: 200px;
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding-top: 7px;
+    padding-left: 15px;
+    margin-bottom: 24px;
+}
+
+.btn-submit {
+    background-color: #072AC8;
+    color: white;
+    font-weight:500;
+    font-size: 1.05rem;
+    padding: 25px;
+    text-decoration: none;
+}
+
+.btn-submit:hover {
+    background-color: #292e47;
+}
+
+@media (max-width: 990px) {
+    .nav-links {
+        display: none;
+    }
+    nav {
+        margin: 0 0 75px 0;
+        padding: 0 30px 0 30px;
+    }
+    #main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #main div {
+        width: 100%;
+        text-align: center;
+    }
+    #main-img{
+        width: 60%;
+    }
+    #img-block {
+        margin-top: 76px;
+    }
+    #credit-card-img {
+        position: absolute;
+        left: 3%;
+        top: 0%;
+        right: auto;
+        bottom: auto;
+        max-width: 34%;
+        }
+    #project-accepted-img {
+        position: absolute;
+        left: auto;
+        top: auto;
+        right: 4%;
+        bottom: -22%;
+        max-width: 34%;
+        z-index: 999;
+        }
+    #brands {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 60px;
+        margin-top: 150px;
+        margin-bottom: 75px;
+        justify-content: center;
+    }
+    #brands div {
+        text-align: center;
+    }
+    #amazon {
+        display: none;
+    }
+    .projects-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 44px;
+        grid-row-gap: 44px;
+        margin: 0 44px 0 44px;
+    }
+    .title {
+        margin-left: 30px;
+    }
+    .memoji-1, .memoji-2, .memoji-3, .memoji-4 {
+        width: 96px;
+        height: 96px;
+    }
+    .autor-testimonial {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+    }
+    #top-contact-btn {
+        display: none;
+    }
+    nav {
+        height: 80px;
+    }
+}
+
+
+
+
+
+  .menu {
+    display: none;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+  }
+  
+  .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: #6C718B;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+  
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+  
+  .menu-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+  
+  @media (max-width: 990px) {
+    .menu-button-container {
+      display: flex;
+    }
+    .menu {
+     display: flex;
+      position: absolute;
+      top: 0;
+      margin-top: 50px;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    #menu-toggle ~ .menu li {
+      height: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    #menu-toggle:checked ~ .menu li {
+      border: 1px solid #333;
+      height: 2.5em;
+      padding: 0.5em;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .menu > li {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0.5em 0;
+      width: 100%;
+      color: white;
+      background-color: #222;
+    }
+    .menu > li:not(:last-child) {
+      border-bottom: 1px solid #444;
+    }
+  }
