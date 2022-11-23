@@ -15,3 +15,10 @@
 - Estructura archivos
 - Estructura HTML
 - Maquetación CSS
+
+## Miercoles 23 Noviembre 2022
+
+### Tasks:
+
+- Pagina de un solo projecto
+- Optimizacion web responsive
