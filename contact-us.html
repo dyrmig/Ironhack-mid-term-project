@@ -11,6 +11,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+
+
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Thank you!</strong> Your Message Have Been Sent.
+    </div>
+
+    <div class="alert-wrong">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Ups.. :(</strong> Something Went Wrong.
+    </div>
+
+
     <div id="navbar">
         <nav>
             <div class="logo"><img src="./resources/images/logos/circle.svg" alt="Circle Agency Logo"></div>
@@ -38,7 +51,7 @@
     <section id="contact-main">
         <div class="txt-title">
             <h1>Contact Us</h1>
-            <div class="form-container">
+            <div id="contact-form" class="form-container">
                 <form action="">
                     <label for="name">Full Name *</label>
                     <input id="name" type="text" placeholder="Enter your full name" required>
@@ -75,5 +88,6 @@
             <a href="#"><div>Privacy Policy</div></a>
         </div>
     </footer>
+    <script src="resources/js/contact.js"></script>
 </body>
 </html>

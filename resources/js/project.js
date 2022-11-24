@@ -26,3 +26,42 @@ const getPost = (post) => {
 }
 
 getPost(postUrl);
+
+const get3randomPosts = () => {
+    //creamos arrays con 3 numeros aleatorios cada uno y nos aseguramos de que no se repitan
+    let randomPosts = [];
+    let imageRandomizer = [];
+    for (let i = 0; i < 3; i++) {
+        let random = Math.floor(Math.random() * 100)+1;
+        while(randomPosts.indexOf(random)!==-1){
+            random = Math.floor(Math.random() * 100)+1;
+        }
+        randomPosts.push(random);
+    }
+    for (let i = 0; i < 3; i++) {
+        let random = Math.floor(Math.random() * 6)+1;
+        while(imageRandomizer.indexOf(random)!==-1){
+            random = Math.floor(Math.random() * 6)+1;
+        }
+        imageRandomizer.push(random);
+    }
+
+    console.log(randomPosts, imageRandomizer);
+
+    //usamos los arrays con los numeros aleatorios para insertar post aleatorios y imagenes
+    fetch('https://jsonplaceholder.typicode.com/posts')
+    .then((response) => response.json())
+    .then((res) => {
+        for (let i = 0; i < 3; i++) {
+            document.querySelector('.projects-container').innerHTML += `<div class="project">
+            <img src="./resources/images/projects-section/${imageRandomizer[i]}.jpg" alt="">
+            <h3>${res[randomPosts[i]].title}</h3>
+            <p>${res[randomPosts[i]].body}</p>
+            <a href="project.html?p=${res[randomPosts[i]].id}">Learn More</a>
+            </div>`;
+        }
+    })
+    .catch((error) => console.log(error))
+}
+
+window.addEventListener("load", get3randomPosts);

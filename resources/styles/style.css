@@ -786,3 +786,43 @@ textarea {
   }
 
   /* Hambuerger menu ends */
+
+  /* Alert message starts */
+  .alert-wrong {
+    display: none;
+    padding: 20px;
+    background-color: #ea2121;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .alert {
+    display: none;
+    padding: 20px;
+    background-color: #25bc5c;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+
+/* Alert message ends */
