@@ -22,3 +22,11 @@
 
 - Pagina de un solo projecto
 - Optimizacion web responsive
+
+## Jueves 24 Noviembre 2022
+
+### Tasks:
+
+- Pulir web responsive
+- Implementación API externa
+- Post request para "Contact Us"

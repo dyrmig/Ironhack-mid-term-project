@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Circle Agency</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resources/styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
@@ -98,35 +98,6 @@
             <a href="#"><div>Privacy Policy</div></a>
         </div>
     </footer>
-    <script>
-        //extraemos el numero del post de la url
-        let params = new URLSearchParams(location.search);
-        var postUrl = params.get('p');
-
-        //consultamos el post extraeido de la url
-        const getPost = (post) => {
-            fetch(`https://jsonplaceholder.typicode.com/posts/${post}`)
-            .then((response) => response.json())
-            .then((res) => {
-
-                    //console.log(res)
-
-                    document.querySelector('.txt-title').innerHTML += `<h1>${res.title}</h1>
-            <div class="subtitle">
-                <h2>${res.title}</h2>
-                <h3>Completed on 2/2/22</h3>
-            </div>
-            <div class="img-container">
-                <img src="./resources/images/projects-section/${res.id}.jpg" alt="">
-            </div>
-            <div class="txt-container">
-                <p>${res.body}</p>
-            </div>`;
-            })
-            .catch((error) => console.log(error))
-        }
-
-        getPost(postUrl);
-    </script>
+    <script src="resources/js/project.js"></script>
 </body>
 </html>
