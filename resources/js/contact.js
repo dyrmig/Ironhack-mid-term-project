@@ -23,6 +23,7 @@ const sendForm = (preventForm) => {
                 //alert('Thank you, your message have been send.');
                 document.querySelector('.alert').style.display = "block";
                 setTimeout(()=> document.querySelector('.alert').style.display = "none", 6000);
+                document.getElementById("form-message").reset();
             } else {
                 document.querySelector('.alert-wrong').style.display = "block";
                 setTimeout(()=> document.querySelector('.alert-wrong').style.display = "none", 6000);
@@ -32,4 +33,4 @@ const sendForm = (preventForm) => {
         .then((json) => console.log(json));
 }
 
-document.querySelector('#contact-form').addEventListener('submit', sendForm);
+document.querySelector('#form-message').addEventListener('submit', sendForm);

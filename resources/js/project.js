@@ -46,8 +46,6 @@ const get3randomPosts = () => {
         imageRandomizer.push(random);
     }
 
-    console.log(randomPosts, imageRandomizer);
-
     //usamos los arrays con los numeros aleatorios para insertar post aleatorios y imagenes
     fetch('https://jsonplaceholder.typicode.com/posts')
     .then((response) => response.json())
