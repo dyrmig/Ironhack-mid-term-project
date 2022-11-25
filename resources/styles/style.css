@@ -582,6 +582,10 @@ textarea {
     nav {
         height: 80px;
     }
+    .txt-title h1 {
+        font-size: 3rem;
+        color: #292E47;
+    }
 }
 
 @media (max-width: 766px) {
@@ -681,6 +685,13 @@ textarea {
         display: flex;
         flex-direction: column;
     }
+    .txt-title h1 {
+        font-size: 2.4rem;
+        color: #292E47;
+    }
+    .subtitle h2, .subtitle h3 {
+        font-size: 1.2rem;
+    }
 }
 @media (max-width: 475px) {
     .txt-block h1 {
@@ -695,6 +706,13 @@ textarea {
     }
     .btn-blue {
         margin-bottom: 30px;
+    }
+    .txt-title h1 {
+        font-size: 2rem;
+        color: #292E47;
+    }
+    .subtitle h2, .subtitle h3 {
+        font-size: 1rem;
     }
 }
 
